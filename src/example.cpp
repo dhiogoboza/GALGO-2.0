@@ -25,7 +25,8 @@ public:
 template <typename T>
 std::vector<T> MyConstraint(const std::vector<T>& x)
 {
-   return {x[0]*x[1]+x[0]-x[1]+1.5,10-x[0]*x[1]};
+   //return {x[0]*x[1]+x[0]-x[1]+1.5,10-x[0]*x[1]};
+   return {pow(x[0], 2) - (2 * x[0] * x[1]) + (6 * x[0]) + pow(x[1], 2) - (6 * x[1]) };
 }
 // NB: a penalty will be applied if one of the constraints is > 0 
 // using the default adaptation to constraint(s) method
